@@ -11,101 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="syles.css" type="text/css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <style>
-        h6 {
-            color: aliceblue;
-            text-align: center;
-            padding-top: 30px;
-            font-size: 30px;
-            font-family: monospace;
-            text-transform: uppercase;
-        }
-
-        .abt {
-            padding-top: 60px;
-            padding-left: 150px;
-           
-        }
-
-        h4,h5 {
-            text-decoration-line: underline;
-        }
-
-        .editbtn {
-            margin-right: 50px;
-            float: right;
-            position: relative;
-            top: -70px;
-        }
-
-        .form-popup {
-            /*display: none;
-                        position: fixed;
-            height: auto;
-            max-height: 88vh;
-            border: 3px solid #f1f1f1;
-            right:15px;
-            overflow: scroll;*/
-            display: none;
-            position: fixed;
-            bottom: 210px;
-            right: 15px;
-            top:10px;
-            border: 3px solid #f1f1f1;
-
-        }
-
-        .form-container {
-            max-width: 300px;
-            padding: 10px;
-            background-color: #b4f2e1;
-        }
-        .form-container input[type=email],
-        .form-container input[type=text],
-        .form-container input[type=password] {
-            width: 100%;
-            padding: 5px;
-            margin: 0 0 22px 0;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        .form-container .btn {
-          background-color: forestgreen;
-           cursor: pointer;
-            width: auto;
-            opacity: 0.8;
-        }
-
-        .form-container .cancel {
-            background-color: red;
-        }
-
-        .form-container .btn:hover,
-        .open-button:hover {
-            opacity: 1;
-        }
-        .propic {
-            border-radius: 50%;
-            padding-left: 10px;
-            position: absolute;
-            bottom: -50%;
-        }
-
-        buttons {
-            margin-left: 20px;
-            width: 200px;
-            margin: 0 auto;
-            display: inline;
-        }
-
-        .action_btn {
-            margin-left: 25px;
-            width: 200px;
-            display: inline;
-        }
-
-    </style>
+    <link rel="stylesheet" href="about.css" type="text/css">
 </head>
 
 <body>
@@ -151,9 +57,9 @@
              $result=$conn->query($sql);
  if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-       echo "<img class='propic' src='profilepic/".$row['propic']."' alt='sorry'  width='130px' height='100px'/>";   
+       echo "<img class='propic' src='profilepic/".$row['propic']."' alt='sorry'  width='130px' height='100px'/>";
   }}
-            
+
             else{
                 echo " <img src='avatar.webp' class='propic' alt='MODI' width='130' height='100' />";
             }
@@ -163,17 +69,17 @@
               $username = "root";
               $password = "";
               $dbname = "candidateforum";
-             
+
               $conn = new mysqli($servername, $username, $password, $dbname);
               if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
-              } 
+              }
               $sql = "SELECT username FROM users where phoneno=".$_SESSION['phoneno']."";
               $result = $conn->query($sql);
               if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-    
-                   echo "<h6>" .$row["username"]. "<h6>"; 
+
+                   echo "<h6>" .$row["username"]. "<h6>";
                 }
               } else { echo "0 results"; }
             ?>
@@ -208,7 +114,7 @@
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
-                     echo "<p><b> Name: </b>" .$row["username"]. "<br><b> Constituency:</b> " .$row["constituency"]. "<br><b> Party Name:</b> " .$row["partyname"]. "<br><b> Date of Birth: </b>" .$row["dob"]. "</p>"; 
+                     echo "<p><b> Name: </b>" .$row["username"]. "<br><b> Constituency:</b> " .$row["constituency"]. "<br><b> Party Name:</b> " .$row["partyname"]. "<br><b> Date of Birth: </b>" .$row["dob"]. "</p>";
                   }
                } else { echo "0 results"; }
             ?>
@@ -219,7 +125,7 @@
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
-                     echo "<p><b> Highest Qualification: </b>" .$row["hqualification"]. "</p>"; 
+                     echo "<p><b> Highest Qualification: </b>" .$row["hqualification"]. "</p>";
                   }
                } else { echo "0 results"; }
             ?>
