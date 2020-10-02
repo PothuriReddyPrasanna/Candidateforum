@@ -17,7 +17,7 @@ $sql= $conn->query("SELECT mverified,vkey FROM users WHERE mverified = 0 AND vke
       else{
         echo $conn->error;
     }
- }    
+ }
     else{
         echo "err";
     }
