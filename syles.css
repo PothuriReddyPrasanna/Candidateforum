@@ -1,0 +1,62 @@
+.ahem {
+    color: white;
+}
+
+img {
+    border-radius: 50%;
+    padding-left: 10px;
+    position:absolute; 
+    bottom: -50%;
+}
+
+.nametag {
+    background-color: #222831;
+    height: 100px;
+    position: relative;
+}
+
+.tabs {
+    background-color: whitesmoke;
+    width: 15%;
+    height: 100vh;
+    float: left;
+    position: sticky;
+}
+
+.profile {
+    background-color: #6983aa;
+    width: 60%;
+    height: 100vh;
+    float: left;
+}
+
+.update {
+    width: 25%;
+    height: 100vh;
+    float: right;
+    background-color: antiquewhite;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-left: 115px;
+    margin-top: 20px;
+}
+
+#status {
+    margin-left: 10px;
+    width: 95%;
+}
+
+.input-group {
+    width: 95%;
+    margin-left: 10px;
+}
+
+.ahem {
+    color: white;
+}

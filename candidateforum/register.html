@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <title>Signup</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url('bgp.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+
+<body class="bg-light" style="text-align: center;">
+    <h2 class="text-success">REGISTER HERE...</h2><br>
+    <form action="usersignup.php" method="POST">
+        <input type="text" name="name" placeholder="Fullname" required minlength="6"><br><br>
+        <input type="text" name="con" placeholder="Constituency" required minlength="3" ><br><br>
+        <input type="text" name="pname" placeholder="Partyname" required minlength="3" ><br><br>
+        <input type="text" name="phoneno" placeholder="Phoneno" required minlength="10"><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <h6>Date of Birth:</h6>
+        <input type="date" name="dob" placeholder="DateofBirth" required><br><br>
+        <input type="text" name="pincode" placeholder="Pincode" required><br><br>
+        <h6>AdharCard:</h6>
+        <input type="file" name="file" style="padding-left: 13%;"><br><br>
+        <input type="password" name="password" placeholder="Password"  required minlength="8" ><br><br>
+
+        <input type="submit" name="signup" value="submit" class="btn-success text-white">
+    </form>
+</body>
+
+</html>
