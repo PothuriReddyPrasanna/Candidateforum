@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="syles.css" type="text/css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <style>
-        
+    <style>  
         .single_content {
             margin-top: 10px;
             padding: 10px 10px 10px 10px;
@@ -21,7 +20,7 @@
             border-radius: 10px;
 
         }
-       
+
         .update{
             height: auto;
         }
@@ -48,12 +47,12 @@
             position: absolute;
             bottom: -50%;
         }
-        
+
         #dateu{
             text-align: right;
             font-family: "Times New Roman", Times, serif;
             font-weight: bold;
-            
+
         }
         h6 {
             color: aliceblue;
@@ -106,10 +105,10 @@
         <div class="container-fluid">
         <h3> My Profile </h3>
         <ul class="nav navbar-nav navbar-right">
-        
+
         <li><a href="welcome.html"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
       </ul>
-            
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -149,9 +148,9 @@
              $result=$conn->query($sql);
  if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-       echo "<img class='propic' src='profilepic/".$row['propic']."' alt='sorry'  width='130px' height='100px'/>";   
+       echo "<img class='propic' src='profilepic/".$row['propic']."' alt='sorry'  width='130px' height='100px'/>";
   }}
-            
+
             else{
                 echo " <img src='avatar.webp' class='propic' alt='MODI' width='130' height='100' />";
             }
@@ -161,7 +160,7 @@
                 $username = "root";
                 $password = "";
                 $dbname = "candidateforum";
-               
+
                 $conn = new mysqli($servername, $username, $password, $dbname);
                 if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
@@ -170,7 +169,7 @@
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                    while($row = $result->fetch_assoc()) {
-                        echo "<h6>" .$row["username"]. "</h6>"; 
+                        echo "<h6>" .$row["username"]. "</h6>";
                    }
                } else { echo "0 results"; }
                $conn->close();
@@ -182,7 +181,7 @@
             $username = "root";
             $password = "";
             $dbname = "candidateforum";
-            
+
             $conn = new mysqli($servername, $username, $password, $dbname);
             if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -193,22 +192,22 @@
                    while($row = $result->fetch_assoc()) {
                        echo "<div class='single_content'>";
                        echo "<p id='dateu'>" .$row["date"]. "</p>";
-                       echo "<p>" .$row["status"]. "</p>";   
+                       echo "<p>" .$row["status"]. "</p>";
                        $file1=$row['file1'];
                        $str=strrev($file1);
                        $pos=strpos($str,".");
                        $str1=strrev(substr($str,0,$pos));
                        if($str1=='png'|| $str1=='PNG'|| $str1=='jpg'|| $str1=='JPG'|| $str1=='jpeg'|| $str1=='JPEG')
                        {
-                           echo "<img class='picu' src='images/".$row['file1']."' alt='sorry'  width='300px' height='200px'/>";     
+                           echo "<img class='picu' src='images/".$row['file1']."' alt='sorry'  width='300px' height='200px'/>";
                        }
-                       echo "</div>"; 
-                    } 
+                       echo "</div>";
+                    }
                 }
-                else { echo "No content"; }   
+                else { echo "No content"; }
             ?>
 
-           
+
         </div>
     </section>
 

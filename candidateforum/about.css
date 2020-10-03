@@ -1,0 +1,92 @@
+h6 {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.abt {
+    padding-top: 60px;
+    padding-left: 150px;
+
+}
+
+h4,h5 {
+    text-decoration-line: underline;
+}
+
+.editbtn {
+    margin-right: 50px;
+    float: right;
+    position: relative;
+    top: -70px;
+}
+
+.form-popup {
+    /*display: none;
+                position: fixed;
+    height: auto;
+    max-height: 88vh;
+    border: 3px solid #f1f1f1;
+    right:15px;
+    overflow: scroll;*/
+    display: none;
+    position: fixed;
+    bottom: 210px;
+    right: 15px;
+    top:10px;
+    border: 3px solid #f1f1f1;
+
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #b4f2e1;
+}
+.form-container input[type=email],
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 5px;
+    margin: 0 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container .btn {
+  background-color: forestgreen;
+   cursor: pointer;
+    width: auto;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+.propic {
+    border-radius: 50%;
+    padding-left: 10px;
+    position: absolute;
+    bottom: -50%;
+}
+
+buttons {
+    margin-left: 20px;
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
+}
+
+.action_btn {
+    margin-left: 25px;
+    width: 200px;
+    display: inline;
+}
